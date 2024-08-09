@@ -1,7 +1,7 @@
-import { saveItem } from '/model/ItemModel.js';
-import { getAllItems } from '/model/ItemModel.js';
-import { deleteItem } from '../model/ItemModel';
-import { updateItem } from '../model/ItemModel';
+import { saveItem } from '../model/ItemModel.js';
+import { getAllItems } from '../model/ItemModel.js';
+import { deleteItem } from '../model/ItemModel.js';
+import { updateItem } from '../model/ItemModel.js';
 
 document.querySelector('#ItemManage #ItemForm').addEventListener('submit', function(event){
     event.preventDefault();
@@ -117,7 +117,7 @@ async function refresh() {
 async function generateId() {
 
     let items = await getAllItems();
-    console.log(items,"+++++++++++Mendis");
+    console.log(items,"++");
     if (!items || items.length == 0) {
         $('#ItemManage .itemId').val("I001");
     } else {
@@ -174,7 +174,7 @@ $('#ItemManage .deleteBtn').click(async function () {
 
 $('#ItemManage .updateBtn').click(async function () {
     let item = {
-        itemId: 'I00',
+        itemId: 'I000',
         itemName: $('#ItemManage .itemName').val(),
         itemQty: $('#ItemManage .itemQty').val(),
         itemPrice: $('#ItemManage .itemPrice').val()

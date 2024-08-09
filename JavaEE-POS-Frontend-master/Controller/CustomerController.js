@@ -45,7 +45,7 @@ async function validate(customer) {
 
     let valid = true;
 
-    if ((/^C0[0-9]+$/).test(customer.custId)) {
+    if ((/^C00[0-9]+$/).test(customer.custId)) {
         $('#CustomerManage .invalidCustId').text('');
         valid = true;
     } else {
@@ -109,7 +109,7 @@ function loadTable(customer){
 }
 
 function extractNumber(id) {
-    var match = id.match(/C0(\d+)/);
+    var match = id.match(/C00(\d+)/);
     if (match && match.length > 1) {
         return parseInt(match[1]);
     }
@@ -118,18 +118,18 @@ function extractNumber(id) {
 
 async function createCustomerId() {
     let customers = await getAllCustomers();
-    console.log(customers,"Enna yanna apirh");
+    console.log(customers,"---");
     if (!customers || customers.length === 0) {
-        $('#CustomerManage .custId').val("C01")
+        $('#CustomerManage .custId').val("C001")
     } else {
         let lastCustomer = customers[customers.length - 1];
         console.log(lastCustomer,"_-------------------------last");
-        let id = lastCustomer && lastCustomer.custId ? lastCustomer.custId : 'C00';
+        let id = lastCustomer && lastCustomer.custId ? lastCustomer.custId : 'C000';
         console.log(id);
         let number = extractNumber(id);
         number++;
         console.log(number)
-        const nextId = 'C0' + number;
+        const nextId = 'C00' + number;
         console.log(nextId);
         $('#CustomerManage .custId').val(nextId)
     }
@@ -243,12 +243,5 @@ $('#CustomerManage .tableRow').on('click', 'tr', function(){
     $('#CustomerManage .custSalary').val(price);
 });
 
-// export function loadCustomers(){
-//     getAllCustomers().then((customer) =>{
-//         console.log(customer,"=============================================getAllCustomers");
-//         customer.map((customer) => {
-//             loadTable(customer);
-//         });
-//     })
-// }
+
 
