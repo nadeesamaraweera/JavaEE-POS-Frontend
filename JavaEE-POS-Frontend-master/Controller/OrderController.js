@@ -1,7 +1,7 @@
-import { getAllOrders } from "/model/OrderModel.js";
-import { getAllCustomers } from "/model/CustomerModel.js";
-import { getAllItems, updateItem } from "/model/ItemModel.js";
-import { saveOrder } from "/model/OrderModel.js";
+import { getAllOrders } from "../model/OrderModel.js";
+import { getAllCustomers } from "../model/CustomerModel.js";
+import { getAllItems, updateItem } from "../model/ItemModel.js";
+import { saveOrder } from "../model/OrderModel.js";
 
 var itemId;
 var itemQty;
@@ -21,6 +21,8 @@ async function refresh() {
     loadCustomer();
     loadItems();
     $('#OrderManage .Total').text("");
+    // $('#OrderManage .SubTotal').text("");
+    // $('#OrderManage .SubTotal').text("");
     $('#OrderManage .Balance').val("");
     $('#OrderManage .Cash').val('');
     $('#OrderManage .Discount').val('');
@@ -38,7 +40,7 @@ function extractNumber(id){
 
 async function generateId() {
     let orders = await getAllOrders();
-
+    // alert(orders.length);
     let id ;
     if (orders.length === 0) {
         id = 'OD01';
@@ -296,5 +298,3 @@ function dropItem(){
     setTotal();
 }
 
-
-// $('#orderManage .itemCmb')

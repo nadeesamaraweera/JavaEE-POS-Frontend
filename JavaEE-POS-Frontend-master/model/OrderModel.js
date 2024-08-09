@@ -4,7 +4,7 @@ export function getAllOrders() {
 
     return new Promise((resolve, reject) => {
         $.ajax({
-            url : "http://localhost:8080/thogakade/order",
+            url : "http://localhost:8080/JavaEE_POS_Backend/order",
             method : "GET",
             success : function(data){
                 resolve(data);
@@ -40,7 +40,7 @@ export function saveOrder(order){
     }
     return new Promise((resolve, reject) => {
         $.ajax({
-            url: "http://localhost:8080/thogakade/order",
+            url: "http://localhost:8080/JavaEE_POS_Backend/order",
             method: "POST",
             contentType: "application/json",
             data: JSON.stringify(orderData),
