@@ -67,7 +67,7 @@ export function updateCustomer(index , customer){
     const customerJson = JSON.stringify(customerData)
 
     $.ajax({
-        url : "http://localhost:8080/JavaEE_POS_Backend/customer?id=C001",
+        url : "http://localhost:8080/JavaEE_POS_Backend/customer",
         method : "PUT",
         data : customerJson,
         headers : {"Content-Type": "application/json"},

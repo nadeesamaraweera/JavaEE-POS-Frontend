@@ -10,7 +10,7 @@ export function saveItem(item) {
     }
 
     $.ajax({
-        url : "http://localhost:8080/item",
+        url : "http://localhost:8080/JavaEE_POS_Backend/item",
         method : "POST",
         contentType : "application/json",
         data : JSON.stringify(sendItem),
@@ -22,9 +22,10 @@ export function saveItem(item) {
 
 export function getAllItems() {
 
+
     return new Promise((resolve, reject) => {
         $.ajax({
-            url: `http://localhost:8080/thogakade/item?id=all`,
+            url: `http://localhost:8080/JavaEE_POS_Backend/item?id=all`,
             method: "GET",
             dataType: "json", // Ensure the response is treated as JSON
             success: function (data) {
@@ -53,7 +54,7 @@ export function getAllItems() {
 
 export function deleteItem(index){
     $.ajax({
-        url : `http://localhost:8080/thogakade/item?id=${index}`,
+        url : `http://localhost:8080/JavaEE_POS_Backend/item?id=${index}`,
         method : "DELETE",
         success : function (data){
             console.log(data);
@@ -70,7 +71,7 @@ export function updateItem(index, item){
     }
 
     $.ajax({
-        url : `http://localhost:8080/item`,
+        url : `http://localhost:8080/JavaEE_POS_Backend/item`,
         method : "PUT",
         contentType : "application/json",
         data : JSON.stringify(sendItem),
