@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #007AFF;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+header .navbar{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    gap: 0vw;
+}
+
+header ul li{
+    background-color: #ffff;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 10px 20px;
+    border: 1px solid #c4c4c4;
+
+}
+
+header ul li a{
+    color: #ff3737;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+section > div{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    font-size: 18px;
+    padding: 1vw;
+}
+
+section > :first-child > div{
+    margin-top: 12vh;
+}
+
+.topic{
+    font-size: 2rem;
+    font-weight: 500;
+    font-family:'Times New Roman', Times, serif;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 28px;
+    font-size: 16px;
+
+
+}
+
+
+form div input ,select{
+    padding: 10px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+.buttons{
+    flex-direction: row;
+    gap:0;
+
+}
+
+.buttons button{
+    padding: 12px 18px;
+    border: 1px solid #c4c4c4;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 16px;
+
+}
+
+.buttons > :first-child{
+    background-color: #56ABF6;
+}
+
+.buttons > :first-child:hover{
+    background-color: #0c49a5;
+    color: white;
+}
+
+.buttons > :nth-child(2){
+    background-color: #DB3843;
+}
+
+.buttons > :nth-child(2):hover{
+    background-color: #be0c17;
+    color: white;
+}
+
+.buttons > :nth-child(3){
+    background-color: #FEBF04;
+}
+
+.buttons > :nth-child(3):hover{
+    background-color: #c7b409;
+    color: white;
+}
+
+
+.buttons > :nth-child(4){
+    background-color: #24A746;
+}
+
+.buttons > :nth-child(4):hover{
+    background-color:green;
+    color: white;
+}
+
+.buttons > :last-child{
+    background-color: #D43A40;
+}
+
+.buttons > :last-child:hover{
+    background-color:#be0c17;
+    color: white;
+}
+
+#CustomerManage table , #ItemManage table{
+    margin-left: 50px;
+}
+
+#CustomerManage th , #CustomerManage td , #ItemManage th , #ItemManage td{
+    border: 1px solid #c4c4c4;
+    width: 20vw;
+    height: 4vw;
+    text-align: center;
+}
+
+#CustomerManage th , #ItemManage th{
+    background-color: #DB3843;
+    color: white;
+}
+
+section{
+    display: none;
+}
+
+
+
+.invoiceDetails{
+    border: 1px solid #000000;
+    padding: 8px 8px;
+}
+
+#OrderManage > div {
+    display: flex;
+    justify-content: space-around;
+}
+
+#OrderManage > :first-child > div {
+    margin-top: 12vh;
+}
+
+#OrderManage h1{
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #24A746;
+    padding: 10px 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+#OrderManage .invoiceDetails form div > div ,#OrderManage .invoiceDetails form > :last-child{
+    margin-top:10px;
+    margin: 5px 1px;
+
+}
+#OrderManage .invoiceDetails form > :first-child{
+    display: grid;
+    grid-template-columns: 45% 45%;
+}
+
+#OrderManage label{
+    font-size: 14px;
+}
+
+
+
+#OrderManage .ItemSelect form > :first-child{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#OrderManage .ItemSelect form div > div , #OrderManage .ItemSelect form > :last-child{
+    margin-top: 0;
+    margin: 10px 15px;
+}
+
+#OrderManage .ItemSelect form > :nth-child(2){
+    display: grid;
+    grid-template-columns: 40% 39% 20%;
+    margin: 0;
+}
+
+.ItemSelect > :last-child{
+    display: flex;
+    justify-content: end;
+}
+
+.ItemSelect button{
+    padding: 10px 20px;
+    border: 1px solid #c4c4c4;
+    cursor: pointer;
+    background-color: #D43A40;
+    color: white;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.ItemSelect{
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
+#OrderManage .TotalCalculate h1 , .TotalCalculate h2{
+    background-color: transparent;
+    padding: 0;
+    font-size: 30px;
+    color: #39dbf8;
+    font-weight: 400;
+}
+
+.TotalCalculate {
+    border: 1px solid #000000;
+    padding: 20px;
+}
+
+.TotalCalculate h2{
+    color: #D43A40;
+}
+
+.TotalCalculate form > :first-child{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.TotalCalculate > :last-child{
+    display: flex;
+    justify-content: center;
+}
+
+.TotalCalculate button{
+    padding: 10px 20px;
+    border: 1px solid #c4c4c4;
+    cursor: pointer;
+    background-color: #24A746;
+    color: white;
+    margin-top: 40px;
+}
+
+.tableRow{
+    height: auto;
+}
+
+.table > div , .tableRows > div{
+    display: flex;
+}
+
+.table , .tableRows{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5.4vw;
+
+}
+
+.table > div > div , .tableRows > div > div{
+    width: 18vw;
+    height: 2.3vw;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 14px;
+    background-color: #1eae72;
+    color: white;
+
+}
+.tableRows > div > div{
+    width: 20vw;
+}
+
+#OrderManage > :last-child{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    max-height: 34vh;
+}
+
+h5{
+    font-size: 15px;
+    color: #ff4343;
+    font-weight: 400;
+    position: absolute;
+    margin-top: 10vh;
+    font-family:'Times New Roman', Times, serif;
+}
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-10%);
+    background-color:transparent;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+#homePage > div{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.counts > div{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.counts > div > div{
+    border: 1px solid #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff5d;
+    text-align: center;
+    width: 20%;
+    height: 50%;
+    padding: 10px 0px;
+    backdrop-filter: blur(15px);
+    border-radius: 100%;
+}
+
+.counts h1{
+    margin-top: 30px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #0f3cf1;
+}
+
+.counts h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #c92424;
+    margin-top: 10px;
+}
+
+.counts img{
+    width: 40%;
+
+}
+
+#homePage .counts{
+    position: absolute;
+    display: block;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+/* responsive */
+
+/* Mobile styles */
+
+@media (max-width: 600px) {
+
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    header .navbar {
+        font-size: 1.2rem;
+    }
+
+    header ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    section > div {
+        grid-template-columns: 100%;
+    }
+
+    section > :first-child > div {
+        margin-top: 5vh;
+    }
+
+    .invoiceDetails {
+        padding: 5px;
+    }
+
+    #OrderManage > div {
+        flex-direction: column;
+    }
+
+    #OrderManage h1 {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    #OrderManage .TotalCalculate form > :first-child {
+        grid-template-columns: 100%;
+    }
+
+    .TotalCalculate {
+        padding: 10px;
+    }
+
+    .TotalCalculate button {
+        margin-top: 20px;
+    }
+
+    .table > div > div, .tableRows > div > div {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .carousel-control {
+        font-size: 1rem;
+    }
+
+    .counts > div {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .counts > div > div {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .counts h1, .counts h2 {
+        font-size: 1.5rem;
+    }
+
+    .counts img {
+        width: 60%;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 992px) {
+    header {
+        padding: 15px;
+    }
+
+    header .navbar {
+        font-size: 1.3rem;
+    }
+
+    header ul {
+        flex-direction: row;
+    }
+
+    section > div {
+        grid-template-columns: 50% 50%;
+    }
+
+    section > :first-child > div {
+        margin-top: 8vh;
+    }
+
+    .invoiceDetails {
+        padding: 10px;
+    }
+
+    #OrderManage > div {
+        flex-direction: row;
+    }
+
+    #OrderManage h1 {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    #OrderManage .TotalCalculate form > :first-child {
+        grid-template-columns: 50% 50%;
+    }
+
+    .TotalCalculate {
+        padding: 15px;
+    }
+
+    .TotalCalculate button {
+        margin-top: 30px;
+    }
+
+    .table > div > div, .tableRows > div > div {
+        width: 50%;
+        font-size: 14px;
+    }
+
+    .carousel-control {
+        font-size: 1.2rem;
+    }
+
+    .counts > div {
+        gap: 30px;
+    }
+
+    .counts > div > div {
+        width: 50%;
+        height: auto;
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    .counts h1, .counts h2 {
+        font-size: 2rem;
+    }
+
+    .counts img {
+        width: 50%;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 993px) {
+    header {
+        padding: 20px;
+    }
+
+    header .navbar {
+        font-size: 1.5rem;
+    }
+
+    header ul {
+        flex-direction: row;
+    }
+
+    section > div {
+        grid-template-columns: 35% 65%;
+    }
+
+    section > :first-child > div {
+        margin-top: 12vh;
+    }
+
+    .invoiceDetails {
+        padding: 8px 8px;
+    }
+
+    #OrderManage > div {
+        flex-direction: row;
+    }
+
+    #OrderManage h1 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    #OrderManage .TotalCalculate form > :first-child {
+        grid-template-columns: 50% 50%;
+    }
+
+    .TotalCalculate {
+        padding: 20px;
+    }
+
+    .TotalCalculate button {
+        margin-top: 40px;
+    }
+
+    .table > div > div, .tableRows > div > div {
+        width: 20vw;
+        font-size: 14px;
+    }
+
+    .carousel-control {
+        font-size: 1.5rem;
+    }
+
+    .counts > div {
+        gap: 50px;
+    }
+
+    .counts > div > div {
+        width: 20%;
+        height: 50%;
+        padding: 10px;
+        border-radius: 100%;
+    }
+
+    .counts h1, .counts h2 {
+        font-size: 2.5rem;
+    }
+
+    .counts img {
+        width: 40%;
+    }
+}
